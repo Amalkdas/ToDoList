@@ -5,6 +5,9 @@
       
       
 }
+input::placeholder{
+    color: rgb(112, 83, 83);
+}
 body{
 
     background-color:#1a2ea0;

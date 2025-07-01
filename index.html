@@ -79,6 +79,7 @@
 //checks if the inputted value is in the storage ( whther caps or small)
               if ((todo.toLowerCase()) in sessionStorage) {
                     alert("Task already exists")
+                    taskin.value=""
                 } 
                 //if it doesnt exist , so we create this one
                 else {
@@ -145,7 +146,7 @@
             const newtodo = (prompt("Enter Updated Task"))
             console.log(newtodo);
 //if  equal to the old value , alert
-            if (newtodo.toLowerCase() == getvalue && newtodo.toLowerCase() in sessionStorage) {
+            if ( newtodo.toLowerCase() in sessionStorage) {
                 alert("Already exists")
             }
             //if not equal, goes onto th enxt
@@ -188,8 +189,9 @@
             //gets the parent element of that div which is the div we created using create element
             const div2 = div.parentElement
 
-            const target = div2.querySelector("#to")
-            const targetfinal = target.toLowerCase()
+            const targettext1 = div2.querySelector("#to")
+            const targettextfinal = targettext1.textContent
+            const targetfinal = targettextfinal.toLowerCase()
 
             if (confirm("Are you sure you want to Delete this task ?")) {
 
