@@ -78,7 +78,7 @@ function add(){
     neww.appendChild(div)
     taskin.value=''
 
-    const saved = sessionStorage.setItem(todo.toLowercase(),"todo")
+    const saved = sessionStorage.setItem(todo,"todo")
     
 
     }
@@ -146,10 +146,15 @@ function edit(button){
     if(newtodo==""){
         alert("No input Recieved")
     }
-    else{
-        tos.textContent=newtodo
+    else if(newtodo in sessionStorage){
+        alert("Already Exists")
+       
 
     }
+     else{
+            
+        }
+        tos.textContent=newtodo
     
    }
    
